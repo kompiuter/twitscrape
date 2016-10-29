@@ -20,13 +20,13 @@ Leaving `Info` empty means the scraper will not log any info messages.
 ```go
 scr := twitscrape.Scrape{Info: os.Stdout}
 start, _ := time.Parse("01/02/2006", "11/10/2009")
-until, _ := time.Parse("01/02/2006", "11/12/2009")
+until, _ := time.Parse("01/02/2006", "11/11/2009")
 // fetch tweets between start and until dates, which contain hashtag #golang
 tweets, err := scr.Tweets("#golang", start, until)
 if err != nil {
   // Handle err
 }
-// tweets is a slice of the twitscrape.Tweet struct
+fmt.Print(tweets[0].Permalink) // https://www.twitter.com/repeatedly/status/5603770675
 ```
 
 See a complete example which writes tweets to an output file [here](https://github.com/kompiuter/twitscrape/blob/master/example/main.go).
