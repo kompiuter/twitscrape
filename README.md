@@ -1,3 +1,5 @@
 # Work in progress
 
-TODO: Update this readme
+TODO: 
+- Create doc.go
+- Update this readme

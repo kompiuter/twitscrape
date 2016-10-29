@@ -21,7 +21,9 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
+	"sort"
 	"strings"
 	"text/tabwriter"
 	"time"
@@ -31,24 +33,37 @@ import (
 
 func main() {
 	ts.Verbose = true
-	start, _ := time.Parse("01/02/2006", "11/10/2009")
-	until, _ := time.Parse("01/02/2006", "11/11/2009")
+	start, _ := time.Parse("01/02/2006", "11/09/2009")
+	until, _ := time.Parse("01/02/2006", "11/12/2009")
 	tweets, err := ts.Tweets("#golang", start, until)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%v", err)
 		os.Exit(1)
 	}
-	printTweets(tweets)
+	f, err := os.Create("golang.txt")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%v", err)
+		os.Exit(1)
+	}
+	sort.Sort(byTimestamp(tweets))
+	printTweets(f, tweets)
 }
 
-func printTweets(tweets []ts.Tweet) {
+// byTimestamp satisfies the Sort.Interface interface
+type byTimestamp []ts.Tweet
+
+func (t byTimestamp) Len() int           { return len(t) }
+func (t byTimestamp) Less(i, j int) bool { return t[i].Timestamp.Before(t[j].Timestamp) }
+func (t byTimestamp) Swap(i, j int)      { t[i], t[j] = t[j], t[i] }
+
+func printTweets(out io.Writer, tweets []ts.Tweet) {
 	const format = "%v\t%v\t%v\n"
-	tw := new(tabwriter.Writer).Init(os.Stdout, 0, 8, 2, ' ', 0)
+	tw := new(tabwriter.Writer).Init(out, 0, 8, 2, ' ', 0)
 	fmt.Fprintf(tw, format, "Timestamp", "Permalink", "Contents")
 	fmt.Fprintf(tw, format,
 		"----------------",
 		"------------------------------",
-		"------------------------------------------------------------------------------------------------------------------------------------------------")
+		"------------------------------")
 	for _, t := range tweets {
 		fmt.Fprintf(tw, format, t.Timestamp.Format("2006-01-02 15:04"), strings.TrimPrefix(t.Permalink, "https://www.twitter.com/"), t.Contents)
 	}
