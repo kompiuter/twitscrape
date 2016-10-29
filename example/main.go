@@ -32,10 +32,10 @@ import (
 )
 
 func main() {
-	ts.Verbose = true
-	start, _ := time.Parse("01/02/2006", "11/09/2009")
+	scr := ts.Scrape{Info: os.Stdout}
+	start, _ := time.Parse("01/02/2006", "11/10/2009")
 	until, _ := time.Parse("01/02/2006", "11/12/2009")
-	tweets, err := ts.Tweets("#golang", start, until)
+	tweets, err := scr.Tweets("#golang", start, until)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%v", err)
 		os.Exit(1)
@@ -60,10 +60,7 @@ func printTweets(out io.Writer, tweets []ts.Tweet) {
 	const format = "%v\t%v\t%v\n"
 	tw := new(tabwriter.Writer).Init(out, 0, 8, 2, ' ', 0)
 	fmt.Fprintf(tw, format, "Timestamp", "Permalink", "Contents")
-	fmt.Fprintf(tw, format,
-		"----------------",
-		"------------------------------",
-		"------------------------------")
+	fmt.Fprintf(tw, format, "----------------", "------------------------------", "------------------------------")
 	for _, t := range tweets {
 		fmt.Fprintf(tw, format, t.Timestamp.Format("2006-01-02 15:04"), strings.TrimPrefix(t.Permalink, "https://www.twitter.com/"), t.Contents)
 	}

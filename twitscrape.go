@@ -39,7 +39,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 	"time"
 
@@ -60,22 +59,27 @@ type Tweet struct {
 	ID string
 }
 
-var (
-	errNoTweets = errors.New("tweets: no tweets found")
-	// minID is the ID of the minimum tweet.
-	// The minimum tweet is the first tweet returned from the first scrape. It should
-	// only be set once.
-	minID string
-)
+// Scrape is responsible for scraping tweets from Twitter.
+// If Info is set to a writer then log messages will be written to that writer,
+// otherwise no log messages will be written
+type Scrape struct {
+	Info io.Writer
+}
+
+var errNoTweets = errors.New("tweets: no tweets found")
 
 // Tweets searches the Twitter archive and returns all tweets found
 // between the start and until date. If you have provided a large period of time,
-// this may take some time to compute. Feedback will be written to Out if you set
-// Verbose to true (package level)
+// this may take some time to complete.
+// Info messages will be written to Scrape.Info
 //
 // Any query operator may be used in the search string to refine your search, as defined by Twitter:
 // https://dev.twitter.com/rest/public/search#query-operators
-func Tweets(search string, start, until time.Time) ([]Tweet, error) {
+func (s Scrape) Tweets(search string, start, until time.Time) ([]Tweet, error) {
+	// minID is the ID of the minimum tweet.
+	// The minimum tweet is the first tweet returned from the first scrape. It should
+	// only be set once.
+	var minID string
 	// maxID tracks the current maximum tweet ID that we currently have.
 	// It should be updated each time a scrape is performed as the last tweet received
 	// by that scrape
@@ -102,7 +106,7 @@ loop:
 		// until we catch them all :).
 		// See doc.go for more information.
 		u := f(maxID)
-		tw, err := tweets(u)
+		tw, err := s.tweets(u)
 		switch err {
 		case errNoTweets: // no more tweets, can stop looping
 			break loop
@@ -125,8 +129,8 @@ loop:
 }
 
 // tweets returns all tweets scraped from the given url
-func tweets(url string) (t []Tweet, err error) {
-	html, err := getHTML(url)
+func (s Scrape) tweets(url string) (t []Tweet, err error) {
+	html, err := s.getHTML(url)
 	if err != nil {
 		return nil, fmt.Errorf("tweets: %v", err)
 	}
@@ -143,18 +147,18 @@ func tweets(url string) (t []Tweet, err error) {
 	// ATTENTION: this selector iterator must always execute FIRST (before the two following)
 	// It is responsible for initially creating the tweet structs.
 	// Scrapes permalink and from it derive screen name & tweet id
-	sel.Each(func(i int, s *goquery.Selection) {
+	sel.Each(func(i int, sel *goquery.Selection) {
 		const statusf = "https://www.twitter.com%s"
-		p, ok := s.Attr("data-permalink-path")
+		p, ok := sel.Attr("data-permalink-path")
 		if !ok {
-			logf("tweet %d: could not get permalink\n", i)
+			s.infoF("tweet %d: could not get permalink\n", i)
 			tweets = append(tweets, Tweet{}) // create empty tweet so that timestamp scraping doesn't fail
 			return
 		}
 		// p is in form '/user/status/tweetid'
 		sl := strings.Split(p, "/")
 		if len(sl) < 4 {
-			logf("tweet %d: permalink %s was not in correct format\n", i, p)
+			s.infoF("tweet %d: permalink %s was not in correct format\n", i, p)
 			tweets = append(tweets, Tweet{}) // create empty tweet so that timestamp scraping doesn't fail
 			return
 		}
@@ -162,46 +166,46 @@ func tweets(url string) (t []Tweet, err error) {
 	})
 
 	// Scrapes timestamp
-	doc.Find(".tweet-timestamp.js-permalink.js-nav.js-tooltip").Each(func(i int, s *goquery.Selection) {
-		t, ok := s.Attr("title")
+	doc.Find(".tweet-timestamp.js-permalink.js-nav.js-tooltip").Each(func(i int, sel *goquery.Selection) {
+		t, ok := sel.Attr("title")
 		if !ok {
-			logf("tweet %d: could not get timestamp\n", i)
+			s.infoF("tweet %d: could not get timestamp\n", i)
 			return
 		}
 		if i > len(tweets) { // should never occur
-			logf("timestamp: found %d timestamps, only %d tweets exist\n", i, len(tweets))
+			s.infoF("timestamp: found %d timestamps, only %d tweets exist\n", i, len(tweets))
 			return
 		}
 		tme, err := time.Parse("3:04 PM - 2 Jan 2006", t)
 		if err != nil {
 			tme = time.Time{}
-			logf("tweet %d: timestamp: could not parse time %s\n", i, t)
+			s.infoF("tweet %d: timestamp: could not parse time %s\n", i, t)
 		}
 		tweets[i].Timestamp = tme
 	})
 
 	// Scrapes contents of tweet
-	doc.Find(".js-tweet-text-container").Each(func(i int, s *goquery.Selection) {
-		t := strings.Trim(s.Text(), " \n")
+	doc.Find(".js-tweet-text-container").Each(func(i int, sel *goquery.Selection) {
+		t := strings.Trim(sel.Text(), " \n")
 		if t == "" {
-			logf("tweet %d: contents were empty\n", i)
+			s.infoF("tweet %d: contents were empty\n", i)
 			return
 		}
 		if i > len(tweets) { // should never occur
-			logf("text: found %d contents, only %d tweets exist\n", i, len(tweets))
+			s.infoF("text: found %d contents, only %d tweets exist\n", i, len(tweets))
 			return
 		}
 		tweets[i].Contents = t
 	})
 
-	logf("%d tweets processed\n", len(tweets))
+	s.infoF("%d tweets processed\n", len(tweets))
 	return tweets, nil
 }
 
 // getHTML returns the HTML body of the JSON response that is returned by calling the Twitter
 // advanced search URL
-func getHTML(url string) (string, error) {
-	logf("fetching %s\n", url)
+func (s Scrape) getHTML(url string) (string, error) {
+	s.infoF("fetching %s\n", url)
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", fmt.Errorf("GET %s: %v", url, err)
@@ -220,17 +224,10 @@ func getHTML(url string) (string, error) {
 	return r.HTML, nil
 }
 
-// Out will have info written to if verbose is set to true.
-// Default is os.Stdout.
-var Out io.Writer = os.Stdout
-
-// Verbose will enable writing of info to io.Writer if set to true.
-// Default is false.
-var Verbose bool
-
-// logf is a wrapper for fmt.Fprintf which writes to Out if Verbose is set to true
-func logf(format string, a ...interface{}) {
-	if Verbose {
-		fmt.Fprintf(Out, format, a...)
+// infoF is a wrapper for fmt.Fprintf which writes to Info
+func (s Scrape) infoF(format string, a ...interface{}) {
+	if s.Info == nil {
+		return
 	}
+	fmt.Fprintf(s.Info, format, a...)
 }
