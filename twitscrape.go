@@ -62,7 +62,7 @@ type Tweet struct {
 // Any query operator may be used in the search string to refine your search, as defined by Twitter:
 // https://dev.twitter.com/rest/public/search#query-operators
 //
-// Set verbose to true to enable logging and will log to Out.
+// Set Verbose (on package level) to true to enable logging to Out.
 func Tweets(search string, start, until time.Time) ([]Tweet, error) {
 	const searchf = "https://twitter.com/search?f=tweets&vertical=default&q=%s since:%s until:%s&src=typd"
 	const df = "2006-01-02"
