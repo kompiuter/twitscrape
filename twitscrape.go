@@ -85,17 +85,21 @@ func (s Scrape) Tweets(search string, start, until time.Time) ([]Tweet, error) {
 	// by that scrape
 	var maxID string
 	// f encapsulates logic for formatting the URL
-	f := func(maxID string) string {
+	f := func(maxID string) (*url.URL, error) {
 		const searchf = "https://twitter.com/i/search/timeline?f=tweets&vertical=default&q=%s since:%s until:%s&src=typd"
 		const df = "2006-01-02"
-		u := fmt.Sprintf(searchf, url.QueryEscape(search), start.Format(df), until.Format(df))
-		u = strings.Replace(u, " ", "%20", -1)
+		raw := fmt.Sprintf(searchf, url.QueryEscape(search), start.Format(df), until.Format(df))
+		raw = strings.Replace(raw, " ", "%20", -1)
 		// On first call, we don't know any tweet ID's so the query 'max position' will not be added.
 		// On subsequents calls maxID should never be empty.
 		if maxID != "" {
-			u += fmt.Sprintf("&max_position=TWEET-%s-%s", maxID, minID)
+			raw += fmt.Sprintf("&max_position=TWEET-%s-%s", maxID, minID)
 		}
-		return u
+		u, err := url.Parse(raw)
+		if err != nil {
+			return nil, fmt.Errorf("parse %s: %v", raw, err)
+		}
+		return u, nil
 	}
 
 	// t will hold tweets as they are coming in from scrapes
@@ -105,13 +109,15 @@ loop:
 		// Twitter public search only returns top 20 tweets, we need to loop
 		// until we catch them all :).
 		// See doc.go for more information.
-		u := f(maxID)
+		u, err := f(maxID)
+		if err != nil {
+			return nil, err
+		}
 		tw, err := s.tweets(u)
-		switch err {
-		case errNoTweets: // no more tweets, can stop looping
-			break loop
-		case nil: // all good!
-		default:
+		if err != nil {
+			if err == errNoTweets { // no more tweets, can stop looping
+				break loop
+			}
 			return nil, err
 		}
 		// minID is the absolute minimum tweet ID for this request, so it should only bet set once
@@ -129,8 +135,8 @@ loop:
 }
 
 // tweets returns all tweets scraped from the given url
-func (s Scrape) tweets(url string) (t []Tweet, err error) {
-	html, err := s.getHTML(url)
+func (s Scrape) tweets(u *url.URL) (tweets []Tweet, err error) {
+	html, err := s.getHTML(u)
 	if err != nil {
 		return nil, fmt.Errorf("tweets: %v", err)
 	}
@@ -143,7 +149,6 @@ func (s Scrape) tweets(url string) (t []Tweet, err error) {
 		return nil, errNoTweets
 	}
 
-	var tweets []Tweet
 	// ATTENTION: this selector iterator must always execute FIRST (before the two following)
 	// It is responsible for initially creating the tweet structs.
 	// Scrapes permalink and from it derive screen name & tweet id
@@ -151,14 +156,14 @@ func (s Scrape) tweets(url string) (t []Tweet, err error) {
 		const statusf = "https://www.twitter.com%s"
 		p, ok := sel.Attr("data-permalink-path")
 		if !ok {
-			s.infoF("tweet %d: could not get permalink\n", i)
+			s.infof("tweet %d: could not get permalink\n", i)
 			tweets = append(tweets, Tweet{}) // create empty tweet so that timestamp scraping doesn't fail
 			return
 		}
 		// p is in form '/user/status/tweetid'
 		sl := strings.Split(p, "/")
 		if len(sl) < 4 {
-			s.infoF("tweet %d: permalink %s was not in correct format\n", i, p)
+			s.infof("tweet %d: permalink %s was not in correct format\n", i, p)
 			tweets = append(tweets, Tweet{}) // create empty tweet so that timestamp scraping doesn't fail
 			return
 		}
@@ -169,17 +174,17 @@ func (s Scrape) tweets(url string) (t []Tweet, err error) {
 	doc.Find(".tweet-timestamp.js-permalink.js-nav.js-tooltip").Each(func(i int, sel *goquery.Selection) {
 		t, ok := sel.Attr("title")
 		if !ok {
-			s.infoF("tweet %d: could not get timestamp\n", i)
+			s.infof("tweet %d: could not get timestamp\n", i)
 			return
 		}
 		if i > len(tweets) { // should never occur
-			s.infoF("timestamp: found %d timestamps, only %d tweets exist\n", i, len(tweets))
+			s.infof("timestamp: found %d timestamps, only %d tweets exist\n", i, len(tweets))
 			return
 		}
 		tme, err := time.Parse("3:04 PM - 2 Jan 2006", t)
 		if err != nil {
 			tme = time.Time{}
-			s.infoF("tweet %d: timestamp: could not parse time %s\n", i, t)
+			s.infof("tweet %d: timestamp: could not parse time %s\n", i, t)
 		}
 		tweets[i].Timestamp = tme
 	})
@@ -188,44 +193,44 @@ func (s Scrape) tweets(url string) (t []Tweet, err error) {
 	doc.Find(".js-tweet-text-container").Each(func(i int, sel *goquery.Selection) {
 		t := strings.Trim(sel.Text(), " \n")
 		if t == "" {
-			s.infoF("tweet %d: contents were empty\n", i)
+			s.infof("tweet %d: contents were empty\n", i)
 			return
 		}
 		if i > len(tweets) { // should never occur
-			s.infoF("text: found %d contents, only %d tweets exist\n", i, len(tweets))
+			s.infof("text: found %d contents, only %d tweets exist\n", i, len(tweets))
 			return
 		}
 		tweets[i].Contents = t
 	})
 
-	s.infoF("%d tweets processed\n", len(tweets))
+	s.infof("%d tweets processed\n", len(tweets))
 	return tweets, nil
 }
 
 // getHTML returns the HTML body of the JSON response that is returned by calling the Twitter
 // advanced search URL
-func (s Scrape) getHTML(url string) (string, error) {
-	s.infoF("fetching %s\n", url)
-	resp, err := http.Get(url)
+func (s Scrape) getHTML(u *url.URL) (string, error) {
+	raw := u.String()
+	s.infof("fetching %s\n", raw)
+	resp, err := http.Get(raw)
 	if err != nil {
-		return "", fmt.Errorf("GET %s: %v", url, err)
+		return "", fmt.Errorf("GET %s: %v", raw, err)
 	}
 	defer resp.Body.Close()
 
-	dec := json.NewDecoder(resp.Body)
-	r := struct {
+	var out struct {
 		HTML string `json:"items_html"`
-	}{}
-	err = dec.Decode(&r)
+	}
+	err = json.NewDecoder(resp.Body).Decode(&out)
 	if err != nil {
 		return "", fmt.Errorf("could not decode: %v", err)
 	}
 
-	return r.HTML, nil
+	return out.HTML, nil
 }
 
-// infoF is a wrapper for fmt.Fprintf which writes to Info
-func (s Scrape) infoF(format string, a ...interface{}) {
+// infof is a wrapper for fmt.Fprintf which writes to Info
+func (s Scrape) infof(format string, a ...interface{}) {
 	if s.Info == nil {
 		return
 	}
