@@ -44,7 +44,7 @@ tweets, err := scr.Tweets("#golang from:davecheney", start, until)
 
 ## Tests
 
-There are tests available and can be run in the root directory using:
+There are tests available that can be run in the root directory using:
 
 ```bash
 go test
