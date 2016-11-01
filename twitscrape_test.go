@@ -88,14 +88,15 @@ func TestScrapeTweetInfo(t *testing.T) {
 	}
 	scanner := bufio.NewScanner(&b)
 	scanner.Split(bufio.ScanLines)
-	want := []string{`fetching https://twitter.com/i/search/timeline?f=tweets&vertical=default&q=%23golang%20since:2009-11-10%20until:2009-11-11&src=typd`,
+	want := []string{`fetching https://twitter.com/i/search/timeline?f=tweets&q=%23golang%20since%3A2009-11-10%20until%3A2009-11-11&src=typd&vertical=default`,
 		`18 tweets processed`,
-		`fetching https://twitter.com/i/search/timeline?f=tweets&vertical=default&q=%23golang%20since:2009-11-10%20until:2009-11-11&src=typd&max_position=TWEET-5602929333-5603770675`}
+		`fetching https://twitter.com/i/search/timeline?f=tweets&max_position=TWEET-5602929333-5603770675&q=%23golang%20since%3A2009-11-10%20until%3A2009-11-11&src=typd&vertical=default`}
 	var errs []string
-	for i, ln := range want {
+	for i := range want {
 		scanner.Scan()
-		if ln != scanner.Text() {
-			errs = append(errs, fmt.Sprintf("got: %s, want: %s", ln, want[i]))
+		got := scanner.Text()
+		if want[i] != got {
+			errs = append(errs, fmt.Sprintf("got: %s, want: %s", got, want[i]))
 		}
 		if err := scanner.Err(); err != nil {
 			t.Error(err)

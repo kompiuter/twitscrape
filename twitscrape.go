@@ -85,21 +85,21 @@ func (s Scrape) Tweets(search string, start, until time.Time) ([]Tweet, error) {
 	// by that scrape
 	var maxID string
 	// f encapsulates logic for formatting the URL
-	f := func(maxID string) (*url.URL, error) {
-		const searchf = "https://twitter.com/i/search/timeline?f=tweets&vertical=default&q=%s since:%s until:%s&src=typd"
+	f := func(maxID string) *url.URL {
 		const df = "2006-01-02"
-		raw := fmt.Sprintf(searchf, url.QueryEscape(search), start.Format(df), until.Format(df))
-		raw = strings.Replace(raw, " ", "%20", -1)
+		u, _ := url.Parse("https://twitter.com/i/search/timeline")
+		q := u.Query()
+		q.Set("f", "tweets")
+		q.Set("vertical", "default")
+		q.Set("src", "typd")
+		q.Set("q", fmt.Sprintf("%s since:%s until:%s", search, start.Format(df), until.Format(df)))
 		// On first call, we don't know any tweet ID's so the query 'max position' will not be added.
 		// On subsequents calls maxID should never be empty.
 		if maxID != "" {
-			raw += fmt.Sprintf("&max_position=TWEET-%s-%s", maxID, minID)
+			q.Set("max_position", fmt.Sprintf("TWEET-%s-%s", maxID, minID))
 		}
-		u, err := url.Parse(raw)
-		if err != nil {
-			return nil, fmt.Errorf("parse %s: %v", raw, err)
-		}
-		return u, nil
+		u.RawQuery = strings.Replace(q.Encode(), "+", "%20", -1)
+		return u
 	}
 
 	// t will hold tweets as they are coming in from scrapes
@@ -109,10 +109,7 @@ loop:
 		// Twitter public search only returns top 20 tweets, we need to loop
 		// until we catch them all :).
 		// See doc.go for more information.
-		u, err := f(maxID)
-		if err != nil {
-			return nil, err
-		}
+		u := f(maxID)
 		tw, err := s.tweets(u)
 		if err != nil {
 			if err == errNoTweets { // no more tweets, can stop looping
