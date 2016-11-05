@@ -53,8 +53,6 @@ go test
 They test that correct output is returned when querying old tweets, relying on the premise that Twitter will never ammend or delete them. If they do, ¯\\_(ツ)_/¯
 ### Roadmap
 
-- [ ] Create doc.go
-- [ ] Add a complete example using query operators
 - [ ] Return tweets using a chan
 
 **Feedback and pull requests are most welcome!**
