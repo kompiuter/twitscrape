@@ -32,6 +32,7 @@ import (
 )
 
 func main() {
+	// Retrieve all tweets containing hashtag #golang from 10-Nov-2009 to 12-Nov-2009
 	scr := ts.Scrape{Info: os.Stdout}
 	start, _ := time.Parse("01/02/2006", "11/10/2009")
 	until, _ := time.Parse("01/02/2006", "11/12/2009")
@@ -40,13 +41,31 @@ func main() {
 		fmt.Fprintf(os.Stderr, "%v", err)
 		os.Exit(1)
 	}
-	f, err := os.Create("golang.txt")
+	f, err := os.Create("out1.txt")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%v", err)
 		os.Exit(1)
 	}
 	sort.Sort(byTimestamp(tweets))
 	printTweets(f, tweets)
+	f.Close()
+
+	// Retrieve all tweets containing hashtag #golang by @davecheney from 10-Nov-2010 to 10-Nov-2011
+	start, _ = time.Parse("01/02/2006", "11/10/2010")
+	until, _ = time.Parse("01/02/2006", "11/10/2011")
+	tweets, err = scr.Tweets("#golang from:davecheney", start, until)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%v", err)
+		os.Exit(1)
+	}
+	f, err = os.Create("out2.txt")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%v", err)
+		os.Exit(1)
+	}
+	sort.Sort(byTimestamp(tweets))
+	printTweets(f, tweets)
+	f.Close()
 }
 
 // byTimestamp satisfies the Sort.Interface interface

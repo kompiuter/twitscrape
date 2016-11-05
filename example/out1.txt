@@ -1,0 +1,395 @@
+Timestamp         Permalink                        Contents
+----------------  ------------------------------   ------------------------------
+2009-11-10 15:26  duncanmak/status/5602929333      Watching Rob Pike's talk on Google's new #golang language. A lot of his points remind me of ML systems, I wonder what's new?
+2009-11-10 15:34  nuttycom/status/5603122189       Nice that #golang doesn't do numeric coercion. Actually, I like that it doesn't do many of the things it doesn't do. Looks clean.
+2009-11-10 15:34  mlinksva/status/5603135894       #golang looks pretty interesting http://golang.org/doc/go_lang_faq.html
+2009-11-10 15:37  janl/status/5603206261           Go func yourself. #golang
+2009-11-10 15:38  mlinksva/status/5603227074       "No major systems language has emerged in over a decade, [while] the computing landscape has changed tremendously." #golang faq/yep/duh
+2009-11-10 15:40  JonGretar/status/5603284206      @jalada Well... I'm a bit confused on what is new in #golang. What is it supposed to solve? Is it just that it compiles fast?
+2009-11-10 15:42  EamonLeonard/status/5603345500   lol RT @janl: Go func yourself. #golang
+2009-11-10 15:43  repeatedly/status/5603369842     なぜここで日本語が出てくるのかｗｗ > fmt.Printf("Hello, 世界\n") #golang
+2009-11-10 15:44  onyxfish/status/5603391391       Ummm, there is actually hype for this: golang.org? How? Why? Ack, my eyes! The blindness is returning! #golang
+2009-11-10 15:44  pbarreto/status/5603395113       @barbolo O que eles querem dizer com "[the] ***safety*** of a compiled language like C or C++"? É piada? :) #golang
+2009-11-10 15:47  Sixeight/status/5603464669       マルチバイト扱えますアピール RT @repeatedly: なぜここで日本語が出てくるのかｗｗ > fmt.Printf("Hello, 世界\n") #golang
+2009-11-10 15:47  nicferrier/status/5603479598     array slices are go's "thing" #golang
+2009-11-10 15:49  barbolo/status/5603524635        @pbarreto Ouso dizer que é porque tipicamente em linguagens compiladas muitos erros são descobertos na compilação.  #to_be_continued #golang
+2009-11-10 15:50  barbolo/status/5603537207        @barbolo Enquanto que em linguagens interpretadas muitos erros são descobertos em runtime #golang
+2009-11-10 15:50  alefragisp/status/5603541166     #golang will be a trending topic in few minutes! Tweets are falling like the rain. wow Google did it again...
+2009-11-10 15:56  onyxfish/status/5603706422       It is possible I am heaping too much scorn upon Go. I offer a respectful nod to its syshacker masters. #golang
+2009-11-10 15:58  nicferrier/status/5603751603     genius: externs are exported with initcaps #golang
+2009-11-10 15:59  repeatedly/status/5603770675     「What kind of a name is 6g?」に対して「The 6g (and 8g and 5g) compiler is named in the tradition of the Plan 9 C compilers, ～」 #golang
+2009-11-10 16:00  pbarreto/status/5603799316       @barbolo Não podiam pelo menos escolher alguma outra linguagem compilada pra comparar? #golang
+2009-11-10 16:03  pbarreto/status/5603900886       @guiraldelli @barbolo @rifiorelli É, tem cara de ser só isso mesmo; até agora não achei uma menção sequer a semântica formal. #golang
+2009-11-10 16:05  repeatedly/status/5603937530     それにしてもこの中途半端な融合が気持ち悪い． for i < len(p) && white(p[i]) { i++ } #golang
+2009-11-10 16:07  barbolo/status/5603988086        @pbarreto @guiraldelli acho que compararam com C/C++ porque das compiladas estão entre as mais rápidas, porém menos produtivas #golang
+2009-11-10 16:07  nicferrier/status/5604005050     each case has an implicit break.  #golang #drooling
+2009-11-10 16:10  repeatedly/status/5604083936     Cに慣れてるとこの関数名が気持ち悪い． runtime・panicl #golang
+2009-11-10 16:12  andrehjr/status/5604125861       #golang ? ;D
+2009-11-10 16:14  Sixeight/status/5604183058       "Python Meets C++" かぁ #golang
+2009-11-10 16:15  mrkov/status/5604189509          @nakanoazusa2 Meets Meets #golang。[業務連絡:停止の可能性もか]
+2009-11-10 16:16  repeatedly/status/5604215905     GC関係のソースどこにあるの？ #golang
+2009-11-10 16:18  repeatedly/status/5604261698     あーでも「int i;」じゃなくて「i int;」なのはいいね． #golang
+2009-11-10 16:20  kevsmith/status/5604307000       "Although integers come in lots of sizes in Go, integer constants do not." PAIN #golang #notsomuch
+2009-11-10 16:20  repeatedly/status/5604310571     return nil, false;とかはPython譲りか… #golang
+2009-11-10 16:23  repeatedly/status/5604391624     この条件部分の書き方ががが？C if b, ok = p.getc(); !ok { return nil, p.err } #golang
+2009-11-10 16:24  zeit_geist/status/5604416917     "Go": another erlang-inspired language to build systems software: http://golang.org/ -- this time with a GCC backend #golang
+2009-11-10 16:25  tinyData/status/5604427092       Google 推出的自己的编程语言，名字叫  Go  , 好喜气的名字呀，官网： http://www.golang.org #GoLang #google
+2009-11-10 16:25  leuriel/status/5604433323        A sign from go-d, that there is still hope for sanity in programming. ken, rob and russ have been hard at work: http://golang.org/ #golang
+2009-11-10 16:26  fujin_/status/5604472015         Pretty sure the hivemind just sharted on #golang
+2009-11-10 16:27  kartar/status/5604493539         @fujin_ They seem to have double-spiked the Kool Aid #golang
+2009-11-10 16:28  quelgar/status/5604510585        It certainly looks like a huge improvement on C. But imperative programming without exceptions? Bleh... #golang
+2009-11-10 16:28  repeatedly/status/5604511525     しかし"・"を関数名に使うのはあまり関心できないなｗｗ #golang
+2009-11-10 16:30  repeatedly/status/5604567341     処理系ソースにstruct Mとかstruct Gとかなめてるのか？ #golang
+2009-11-10 16:34  plagosus/status/5604652885       #GoLang deluje poprilicno cool #Google #Go ;) http://golang.org
+2009-11-10 16:34  repeatedly/status/5604661409     go文でgoroutineの開始か #golang
+2009-11-10 16:38  joao_neto/status/5604760729      Go is a Google Programming language? http://golang.org/ #golang
+2009-11-10 16:38  illness072/status/5604762182     なんつうか、syntax的には特筆するもののない、ありふれた言語だね #golang
+2009-11-10 16:38  masami256/status/5604768639      gcとgccgoなんてのがあるの。 #golang
+2009-11-10 16:39  metacloud/status/5604783698      Why would I want to learn Go language via @HunterClarke #Golang, Maybe because it's from google.
+2009-11-10 16:41  masami256/status/5604823685      gcはMercurial、gccgoはsvnを使ってソースを落とせと。どっちも入れてないお。 #golang
+2009-11-10 16:41  omo2009/status/5604825138        これは前にでてきた java もどきとは全然レベルがちがいそうだなー。c++ is dead の夢を見たい感じ・・・。 #golang
+2009-11-10 16:41  repeatedly/status/5604831676     expパッケージにevalがあるや． #golang
+2009-11-10 16:43  repeatedly/status/5604877681     mgc0.cってのがGCのソースっぽいけど，step 0になってるぞ．他のstepはどうした？ #golang
+2009-11-10 16:43  masami256/status/5604880923      ソースはwebでも見れる http://is.gd/4Saev #golang
+2009-11-10 16:45  heisenthought/status/5604926167  Sweet, #golang bundles with a json-template inspired template library. #loveit
+2009-11-10 16:45  spodzone/status/5604934321       @davepdotorg Ugliest attempt at a new language I've seen for a while. I thought we'd outgrown syntax-fixation and old C paradigms #golang
+2009-11-10 16:46  iturgeon/status/5604964692       Google's programming language Go http://bit.ly/wppYj http://golang.org/ #golang
+2009-11-10 16:49  onyxfish/status/5605024930       3/4ths through the #golang presentation (http://bit.ly/2MnE23), was briefly impressed with ideas but the syntax is impossibly dated.
+2009-11-10 16:49  repeatedly/status/5605027578     cgoっていう拡張子のCとgoが混じったソースががが  #golang
+2009-11-10 16:50  dbalatero/status/5605049325      farttttttttttt #golang
+2009-11-10 16:51  repeatedly/status/5605075905     mgc0.cのコメントにこんな一文が…「NOT INTENDED FOR PRODUCTION USE.」 #golang
+2009-11-10 16:52  masami256/status/5605116000      #include <u.h>とか見たことあるなと思ってたら、u.hのコメントに「Plan 9 from User Space include/u.h」って書いてあった #golang
+2009-11-10 16:54  repeatedly/status/5605147416     おそらく「Python遅いし静的型付けじゃない．C++は静的型付けでコンパイルできて速いけど書きにくい．じゃあくっつけちゃえばいっか」って感じで生まれた言語な気がする． #golang
+2009-11-10 16:59  andrehjr/status/5605288249       tentando dar build no #golang , e me deparo com um 'Segmentation fault' ? :/
+2009-11-10 17:02  repeatedly/status/5605367303     あれ？参照カウントなくないか？ #golang
+2009-11-10 17:05  bradfitz/status/5605439170       Yay open sourcing of Go! http://golang.org/ Lot of good stuff there. #go #golang
+2009-11-10 17:07  DSelitskiy/status/5605481102     RT @bradfitz Yay open sourcing of Go! http://golang.org/ Lot of good stuff there. #go #golang //interesting...
+2009-11-10 17:07  repeatedly/status/5605485091     GoのGCは何の面白みもないM&Sでした，めでたしめでたし． #golang
+2009-11-10 17:08  repeatedly/status/5605516577     step 0でプロダクションレベルでは使えないと書いてるし，今後強化するんだろうけど，現段階では何の魅力もないということで，Goについてはこれで終わり．後は誰か興味を持った人が面白い機能があれば紹介してくれるでしょう． #golang
+2009-11-10 17:10  rane_hs/status/5605573892        TLがgo言語とかいう面白そうなもので埋まっている。.#golang RT @Dubhead: The Go Programming Language http://ff.im/-bh6a6 [VC6爆発しろ！]
+2009-11-10 17:10  lucasmezencio/status/5605575302  Todo mundo falando de apagão. Vou falar mesmo é da #golang! Linguagem de programação lançada pelo @Google! http://golang.org/
+2009-11-10 17:13  repeatedly/status/5605639614     正規表現/リフレクション/単体テスト/ネットワーク関係/コンテナなどなど今必要そうな機能はそれなりに入ってる感じ．ランタイム弱いけど，まぁ最低限使えるから公開した，って感じ．のちのちexpにあるevalとかも入るんだろう． #golang
+2009-11-10 17:14  naderman/status/5605664952       RT @janl Go func yourself. #golang
+2009-11-10 17:14  amandinhakee/status/5605671344   ♺ @lucasmezencio Todo mundo falando de apagão. Vou falar é da #golang! Linguagem de programação lançada pelo @Google! http://golang.org/
+2009-11-10 17:17  repeatedly/status/5605736921     あえて言えばconcurrentな部分だけは気になる．関数型方面だとあまり気にならないけど，Python & C++な言語でどうすっきり書けるのか．新しいモデルが用意されてるのか，他の言語よりも書きやすいだけなのか，どんな感じかなと． #golang
+2009-11-10 17:21  repeatedly/status/5605835484     ああ，テンプレートエンジンも標準ライブラリに入ってるのか．rpcも入ってるし，システムと良いながらかなり高レイヤーも考えてるのね #golang
+2009-11-10 17:24  peterc/status/5605913682         Since the Google Go language is hosted at golang.org, perhaps "golang" is a good term to use for tags, etc. #golang
+2009-11-10 17:27  shahabshahabs/status/5605977633  Techfolk har nå muligheten til å lære seg et helt nytt programmeringspråk... av google! http://golang.org/doc/go_tutorial.html #golang
+2009-11-10 17:32  Masahito/status/5606092730       Windowsのバイナリはまだないのね。#golang > Installing Go http://golang.org/doc/install.html
+2009-11-10 17:45  chanezon/status/5606405556       Google is hiring a developer program engineer for the Go language http://bit.ly/1fOQsk #jobs #google #golang
+2009-11-10 17:45  btbytes/status/5606419556        Go - http://golang.org a new system programming language by Google #golang
+2009-11-10 17:51  mmayo/status/5606567186          Plan 9: Not dead yet!  #golang
+2009-11-10 17:53  mmalex/status/5606610937         #golang http://golang.org->yum!rob pike's unique design style always appeals. by chance was reading http://bit.ly/qqCN yesterday;great team!
+2009-11-10 17:53  qaramazov/status/5606619310      @mlinksva What are Go's advantages over Objective-C, D, etc.? The FAQ is rather vague. #golang
+2009-11-10 17:55  chanezon/status/5606664629       already 109 members in http://bit.ly/zIqnu Google group #golang
+2009-11-10 17:58  mdrcode/status/5606732328        RT @chanezon: Google is hiring a developer program engineer for the Go language http://bit.ly/1fOQsk #jobs #google #golang
+2009-11-10 17:58  vinoaj/status/5606733199         RT @chanezon: Google is hiring a developer program engineer for the Go language http://bit.ly/1fOQsk #jobs #google #golang
+2009-11-10 18:00  golangnuts/status/5606771876     Hey! Ho! Let's Go! Open Sourcing the Go programming language http://bit.ly/1NxkxC #golang #developer #google
+2009-11-10 18:01  kallistec/status/5606821738      Obligatory #golang tweet. Apparently std style enforced by gofmt is tabs not spaces, but the examples use 2 or 4 spaces. :set expandtab
+2009-11-10 18:01  franknaval/status/5606824503     RT chanezon already 109 members in http://bit.ly/zIqnu Google group #golang
+2009-11-10 18:01  kazunori_279/status/5606812647   RT @mdrcode: RT @chanezon: Google is hiring a developer program engineer for the Go language http://bit.ly/1fOQsk #jobs #google #golang
+2009-11-10 18:09  jpanzer/status/5607015490        Go Go! http://golang.org/  #golang
+2009-11-10 18:09  zii/status/5607021724            looking at the build files for #golang. cool to see they use flex/bison like we do in compilers class. ah, the possibilities!
+2009-11-10 18:21  mlinksva/status/5607295255       Way to pick a google-able name, google. #golang
+2009-11-10 18:22  arun/status/5607332605           I'm cup-half-full retweeting an old friend, mainly since new languages are irresistible RT @jpanzer Go Go! http://golang.org/ #golang
+2009-11-10 18:25  teddyjas/status/5607405159       GO: first impression is Yucky!!! coders r basically lazy, the language should be short and efficient for us to code #golang
+2009-11-10 18:26  chanezon/status/5607433473       RT @jpanzer: Go Go! http://golang.org/  #golang
+2009-11-10 18:29  annemich928/status/5607491619    Go nuts with Go! Go new open source programming language from #Google #golang http://golang.org
+2009-11-10 18:29  jmhodges/status/5607508600       #golang totally ganked the old Pike newsqueak (not the one that is out today) concurrency model and syntax like Sawzall before it. Awesome!
+2009-11-10 18:32  jmhodges/status/5607565965       Shit guys, the channel concurrency model was most of the reason I was going to write blink. Fuck me, maybe I'll do it on top of #golang.
+2009-11-10 18:32  annemich928/status/5607581302    Go nuts with Go! Go new open source programming language from #Google #golang http://golang.org http://ff.im/bhiop
+2009-11-10 18:34  leonelnc/status/5607626362       let's goooooo   http://golang.org, #golang
+2009-11-10 18:37  mosaic_school/status/5607702819  GOing to sleep after absorbing http://golang.org - it's about time (~3.30am local) #golang
+2009-11-10 18:43  dchest/status/5607840821         Функции могут возвращать больше 1 значения, например f, err = file.Open(...). #golang
+2009-11-10 18:51  sagasw/status/5608022911         #golang 版本控制用的是水银,要学学
+2009-11-10 18:53  im_module/status/5608067372      @stuartsierra Is there shared-nothing #concurrency in Google's Go ? #golang
+2009-11-10 18:54  googollee/status/5608084026      似乎Go的语法语义完全是披着大括号的Python。没有template的话,编译时会对静态interface做优化么? #golang
+2009-11-10 18:55  zii/status/5608122179            roommate is playing modern warfare 2. guess I'll poke at #golang some more.
+2009-11-10 19:00  mohri/status/5608234087          新言語のリリースが電撃バップ！ いかすぜグーグル http://bit.ly/UQIYS #golang
+2009-11-10 19:05  sagasw/status/5608340673         #golang @googollee 对于lua来说,返回list(也就是table)和返回多值是不一样的,我还是先学习lua吧,等go更熟一点
+2009-11-10 19:07  nogajun/status/5608389339        Hey! Ho! Let's Go! RT: @mohri: 新言語のリリースが電撃バップ！ いかすぜグーグル http://bit.ly/UQIYS #golang
+2009-11-10 19:07  googollee/status/5608390572      可能lua的list和python的list不一样吧。我说的list就是个有序表,然后多值的时候就是按序赋值 @sagasw #golang @googollee 对于lua来说,返回list(也就是table)和返回多值是不一样的,我还是先学习lua吧,等go更熟一点
+2009-11-10 19:07  einsidan/status/5608400503       Interesting stuff from Google, once again... http://golang.org #golang
+2009-11-10 19:10  Rob_Russell/status/5608467218    okay, my site can wait, got drawn in by Go #golang
+2009-11-10 19:11  sagasw/status/5608492980         #golang @googollee lua中的table是唯一的复杂数据结构,综合了list,map的特性,非常简洁轻巧,但是功能也超级强大,go作为一个语言想跟lua一样成熟估计还要几年
+2009-11-10 19:15  miura1729/status/5608588088      Language Design FAQ 面白い http://golang.org/doc/go_lang_faq.html #golang
+2009-11-10 19:16  miura1729/status/5608613521      でもやっぱりなぜCSPか判らない。分散システムをターゲットにしているとは思えないし。 #golang
+2009-11-10 19:19  masami256/status/5608670024      .cファイルのローカル変数名（1文字の変数名とか）を見てると、懐かしい感じがしてくる #golang
+2009-11-10 19:21  masami256/status/5608710296      このコーディングスタイルはK&R第2版準拠だと思う。 #golang
+2009-11-10 19:25  sagasw/status/5608811193         #golang 不知道可不可以通过gdb来调试?
+2009-11-10 19:28  cyglor/status/5608870219         building google's #golang on osx: failed at network test: gopack grc _test/net.a --- FAIL: net.TestDialError #4: dial tcp no-such-name:80
+2009-11-10 19:31  thepose/status/5608944665        mmm...  #golang logo: http://bit.ly/1r0q5g #plan9 logo: http://bit.ly/1OG13Y code reuse -> logo reuse ? :P
+2009-11-10 19:31  brianjlandau/status/5608958235   RT @janl: Go func yourself. #golang - Count me in as interested in http://golang.org/
+2009-11-10 19:34  himoji/status/5609024097         先頭が大文字だとパッケージの外から見えるようになる、って仕様が気持ち悪い。 #golang
+2009-11-10 19:38  netmask/status/5609110325        insisto que #golang me recuerda a perl por lopoco expresivo :P
+2009-11-10 19:49  philcrissman/status/5609349237   Compiled go and went through a few of the examples in the tutorial. Neat, but now I don't really have anything to *use* it for. #golang
+2009-11-10 19:55  Rob_Russell/status/5609491599    "Go has pointers but not pointer arithmetic" interesting choice http://bit.ly/1dWsMV #golang
+2009-11-10 19:57  nicferrier/status/5609528482     ran my first program #golang
+2009-11-10 20:05  chad_walters/status/5609694601   @akumar @spullara: is it a good idea to have a GC'd systems language? Not sure how to get RAII (or even finally) behavior with Go. #golang
+2009-11-10 20:13  ryankanno/status/5609873379      @jlnoblezada Nopes... it's a normal workday for me tomorrows. Quiet night reading about #golang tonight. :D
+2009-11-10 20:16  Rob_Russell/status/5609940192    got helloworld.go built. that was easy #golang
+2009-11-10 20:22  repeatedly/status/5610045611     今GCの詳細眺めてたけど，mlookupの返り値でもし参照の状態がRefNoneの場合にRefSomeに書き換えてるんだけど，スイープ時にはRefNoneだったらfreeしてる．これどうなってるの？ #golang
+2009-11-10 20:24  repeatedly/status/5610101415     というかさぁRefFreeとかRefStackとかあるんだから，ちゃんとそれ使ってrefに値を代入しようよ．代入は数値で比較はRefFreeとか読みにくすぎる… #golang
+2009-11-10 20:29  repeatedly/status/5610198147     ああああ勘違い．RefSome代入しないとダメだ．そうじゃないとMarkにならないじゃないか #golang
+2009-11-10 20:33  mohri/status/5610276694          The Go Programming Languageのマスコットの名前はなんていうんだろう？ #golang *Tw*
+2009-11-10 20:36  mohri/status/5610335686          "golangnuts" ってのはこいつの名前じゃないよな http://bit.ly/qkdbK #golang
+2009-11-10 20:41  zachberry/status/5610444366      @iturgeon looking at #golang - did you see in the tutorial that { and } for ifs, switches and fors are manditory?!!!! :O
+2009-11-10 20:48  jntrnr/status/5610578998         First impressions of #golang - fast compiles, annoying sigils, cool goroutines, cool channels, bizarre syntax (iota?). Letting it sink in.
+2009-11-10 20:52  codedread/status/5610637344      Downloaded, built, configured compilers. Built HelloWorld. Asked a few questions on IRC.  Wrote a Makefile. That's enough for now. #golang
+2009-11-10 21:08  repeatedly/status/5610960403     とりあえず小さいオブジェクトはMCacheを使ってスタックとして確保して，32kb以上のオブジェクトはMHeapを使っている．でMCacheはRefStackとマークしていて，GC時は完全無視している． #golang
+2009-11-10 21:12  ghoulr/status/5611019512         今天的twitter被Google的 #golang 淹没了。。。
+2009-11-10 21:14  repeatedly/status/5611067874     マーク処理がグローバルな状態のリンクリストからスタックを取り出してそれぞれをスキャンしているのが少し引っ掛かる． #golang
+2009-11-10 21:17  repeatedly/status/5611108752     Goの環境が常にスタックを監視できる状態ということは，ある意味rootは全部Goが持ってるわけで． #golang
+2009-11-10 21:19  repeatedly/status/5611143881     あーやっぱりちゃんとソース読んだ方がいいかもしれない． > GC #golang
+2009-11-10 21:26  repeatedly/status/5611271863     いやでもやっぱりscanblockで，スタックサイズをポインタの大きさで割って，それぞれをmlookupしてるわけだけど，このスタック上にポインタとそれと同じ値を持った整数があると，mlookup側では判断できないはず… #golang
+2009-11-10 21:38  repeatedly/status/5611482306     あーでも行けそうかも．mlookupで同じ値でもRefSomeならそもそもスルーされるし，MHeapがポインタっぽい値を拒否するようにしていればPreciseになる．と思うんだけど，MHeapがそうなってないような．あのMask辺りがそれを考慮してるのかな？ #golang
+2009-11-10 21:41  repeatedly/status/5611539166     これ以上は後々ソース落としてやるか，エロい人の解説を待つ． #golang
+2009-11-10 21:41  repeatedly/status/5611529261     これ以上は実際にヒープの状態を考えながらじゃないと厳しいかもしれない．要はMHeapMap_GetMaybeの中のi1が有効でi2も有効となるような整数値をGoのスタック上に配置することが出来るのか？という問題(かも？)． Preciseか否か． #golang
+2009-11-10 21:45  zakkas783/status/5611597250      むー。C++やってるとそれなりに取っ付けそう。http://bit.ly/ZzjGv #golang
+2009-11-10 21:46  repeatedly/status/5611613219     とりあえず言えること．Goのソースはあまり綺麗じゃない． #golang
+2009-11-10 21:49  damncabbage/status/5611674150    Adding #golang to the to-do list. Goroutines look interesting. :D http://golang.org
+2009-11-10 21:51  arnaudsj/status/5611697136       it's interesting how one key goal of #golang is to compile millions of lines of code FAST (e.g in seconds, instead of hours/days)
+2009-11-10 21:52  leuriel/status/5611715113        Already picked my first #Go project: http://repo.cat-v.org/goblin/ Contributions welcome. And hope to help @anantn with go9,9P in go #golang
+2009-11-10 21:53  repeatedly/status/5611730722     if (0)とかif (1)とかコードに入れるなよ… #golang
+2009-11-10 21:55  stuffonfire/status/5611763268    nw, ew := file.Stdout.Write(buf[0:nr]); nw != nr #golang what the FUUUUUU
+2009-11-10 21:59  machu/status/5611828239          ごめんなさい RT @repeatedly: if (0)とかif (1)とかコードに入れるなよ… #golang
+2009-11-10 22:03  BobbyDee/status/5611899250       Compiled Go code runs at close to the speed of C, on the web! #this_could_be_big #golang.org
+2009-11-10 22:06  t_okada/status/5611952235        とりあえず Language Design FAQ あたりから読むか。 http://golang.org/doc/go_lang_faq.html #golang
+2009-11-10 22:14  aaront/status/5612076021         Tomorrow, I'll convert one of my old C programs to Go, just for fun. #golang #go #google
+2009-11-10 22:21  kkongling/status/5612190042      针对SMP的系统级语言，看来 #golang 也是出来解决并发问题的啊
+2009-11-10 22:34  jboner/status/5612378439         RT @bradfitz: Yay open sourcing of Go! http://golang.org/ Lot of good stuff there. #go #golang
+2009-11-10 22:34  jsilland/status/5612382689       It saddens me a bit that people think we need new languages. I think we really need more smart developers instead - wait and see! #golang
+2009-11-10 22:40  repeatedly/status/5612477696     なんでこういう記事ではいつもD言語を無視するのか．比べるとそれほど斬新なことはしていない． http://www.atmarkit.co.jp/news/200911/11/go.html #golang
+2009-11-10 23:01  swolfe/status/5612768746         So many interesting languages are emerging, too many to learn. #Erlang, #Clojure, #golang, #factor ... I want to learn them all!
+2009-11-10 23:02  Rob_Russell/status/5612780959    cool feature in #golang - "defer" http://bit.ly/1WRcND for that cleanup you have to do at the end of the current function
+2009-11-10 23:06  Equix3n/status/5612847691        Google launches its own programming language-"GO" http://golang.org/ http://alturl.com/3m8g http://alturl.com/z5fs #GO #GoogleGO #golang
+2009-11-10 23:15  shanehanna/status/5612974800     http://golang.org Mental naming conventions in the examples. Embrace the underscore, you know it makes sense. #golang
+2009-11-10 23:20  gnuowned/status/5613044842       sigue compilando el chingado Go #golang, eso me pasa por hacerlo en mi #aaone jojojo
+2009-11-10 23:23  Joolz/status/5613087829          So #golang is out - looks.... interesting. Not quite sure what it's really that useful for yet.
+2009-11-10 23:24  gnuowned/status/5613098211       --- cd ../test
+0 known bugs; 0 unexpected bugs
+Go compilado #golang
+2009-11-10 23:35  plus7/status/5613250643            また検索に引っかからない名前を… #golang
+2009-11-10 23:37  plus7/status/5613286519            マスコットキャラがGlendaのキモカワいさとDのマスコットのウザさを合わせた感じだな #golang #dlang #plan9
+2009-11-10 23:41  repeatedly/status/5613337655       とりあえずはてなキーワード作ったので，後は誰か編集よろ． http://d.hatena.ne.jp/keyword/Go #golang
+2009-11-10 23:44  pullus/status/5613376583           こういう色合いだったのかこいつ RT @syuu1228: このキャラ、カラーで大きいと余計にきもいなーRT @repeatedly: とりあえずはてなキーワード作ったので，後は誰か編集よろ． http://d.hatena.ne.jp/keywo... #golang
+2009-11-10 23:44  repeatedly/status/5613375905       Goという名前で，ogleというデバッガが標準にあるという． #golang
+2009-11-10 23:44  syuu1228/status/5613368268         このキャラ、カラーで大きいと余計にきもいなーRT @repeatedly: とりあえずはてなキーワード作ったので，後は誰か編集よろ． http://d.hatena.ne.jp/keyword/Go #golang
+2009-11-10 23:52  ppalludan/status/5613474806        Google's new programming language Go looks promissing. But the naming is just as bad as .Net, why cant they also invent new names? #golang
+2009-11-10 23:52  kashopi/status/5613476157          @Bendem #golang es como una mezcla entre C++ y Pascal ¿no?
+2009-11-10 23:54  sudheera/status/5613506553         checking out "GO" http://golang.org/ [youtube] http://bit.ly/4k2zfi #google #golang
+2009-11-10 23:57  donbox/status/5613540757           Anyone spent time with http://golang.org/ yet? #golang
+2009-11-11 00:18  arnegleditsch/status/5613820698    How long till #golang runs on #parrot?  (And: "goroutines"?  *groan*)
+2009-11-11 00:25  _antonioguerra/status/5613909848   New language to learn? http://golang.org/ #google #golang
+2009-11-11 00:25  PeterAzP/status/5613908740         Google releases new open source programming language http://golang.org/ #google #golang
+2009-11-11 00:29  alexconrad/status/5613963714       A new fast and dynamic programming language by Google: "Go" #golang http://bit.ly/1gF6kJ
+2009-11-11 00:31  elpargo/status/5613981611          Just read the #golang docs and I like it. Seems like a modern C and what C++, objective C, and D should be. that is simple yet powerful.
+2009-11-11 00:31  ashmind/status/5613978447          Google Go. Finally a new language, but too low-level, and syntax is ugly. What I have seen of D is much better, not to mention Ruby. #golang
+2009-11-11 00:33  elpargo/status/5614007280          Am I the only #python programmer that likes #golang ideas? It steals many core python features yet looks nothing like it syntactically.
+2009-11-11 00:35  repeatedly/status/5614037036       つ #golang RT @bojovs: はてブによるgolang.orgへの食いつきはすごいけど、Twitter上で#goを付けて言及してる人が見受けられない件
+2009-11-11 00:38  USAGI_WRP/status/5614069395        #golang てハッシュタグ付けて日本語でしゃべくるのもアレかなーと思ってこそこそ。まあ、"Hello, 世界"だしいっかー。
+2009-11-11 00:43  elpargo/status/5614141411          Who will have thought that reading the #golang docs will show me this excellent templating engine http://bit.ly/tOotm I'll have to try it!
+2009-11-11 00:43  bartfromnl/status/5614136065       I think Google Language is cool, I like the syntax, but it's a bit unclear what's it all about, #golang http://www.golang.org
+2009-11-11 00:51  MagicHerb/status/5614243944        google go rox http://bit.ly/2o2ywI #golang
+2009-11-11 00:54  alblue/status/5614272111           Go looks interesting. Suspect exceptions missing will come back to haunt them, as will the global err number; further thoughts later #golang
+2009-11-11 01:12  ksetyadi/status/5614514759         Go Programming Language is not for Windows, I think.. #golang
+2009-11-11 01:22  flowolf/status/5614636372          new programming language from #google: #go. first impression is nice. #golang #dev http://golang.org
+2009-11-11 01:26  pbarreto/status/5614698293         @barbolo @guiraldelli @efregni Pois é, estamos falando de #golang mesmo -- ou estávamos, antes do #apagao deixar 10-12 estados no escuro
+2009-11-11 01:32  pbarreto/status/5614776315         @guiraldelli Pelo menos #golang não tem #dangling_else na sintaxe.
+2009-11-11 01:41  dikopat/status/5614890109          #golang ? ga pernah denger tuh
+2009-11-11 01:41  mosaic_school/status/5614890636    Compiled #golang on linux-amd64... 'HelloWorld' runs. Let's see if can get a NeHe OpenGL lesson ported (when I got some free time, weekend?)
+2009-11-11 01:42  brunocruzcoelho/status/5614893197  #google launched #golang: "...builds feel instantaneous; (...) And the compiled code runs close to the speed of C" - http://bit.ly/1IaD0e
+2009-11-11 01:53  nadavwr/status/5615035581          Go:  Rob Pike, Ken Thompson, Russ Cox, and a Glenda clone. Didn't know they all worked for Google. Serious Business. #golang
+2009-11-11 02:01  arbovm/status/5615147022           a quite interesting looking system #programming language directly from google http://bit.ly/2Xo0ur #go #golang
+2009-11-11 02:09  neilgall/status/5615241229         #golang has interesting ideas but if it doesn't integrate with the C runtime it's a non-starter as a systems language.
+2009-11-11 02:17  lempiji/status/5615352397          型宣言が後置で、コードフォーマッタがあって、SwitchがIf-Elseのchainで…こいつはVBか！#golang
+2009-11-11 02:22  barbolo/status/5615420923          @guiraldelli @pbarreto @efregni @rfiorelli é o Google, eles devem ter pensado em tudo pra fazer a GO =P #golang
+2009-11-11 02:27  pbarreto/status/5615489849         @barbolo @guiraldelli Ué, mas #golang não tem classes? Não dá pra programar #OO então?
+2009-11-11 02:29  dankogai/status/5615516607         http://golang.org/ だし、#golang でおちつくんじゃね?で、それを「ゴラン」と平板読みされてワシはハァ?となると<@koizuka 簡単に呼ぶのはどうすればいいんだろう。Googleってつけるのはあんまり良くない気はするが "Go言語"っていっていいのかな
+2009-11-11 02:32  craigwebster/status/5615550040     Go. Because what we really need is another C++. #golang
+2009-11-11 02:34  Gittit/status/5615580592           #golang New programming language by google. I'm excited. http://golang.org/
+2009-11-11 02:37  pbarreto/status/5615627758         @rifiorelli @efregni @barbolo @guiraldelli Eca! Parece que #golang nem é livre de contexto! Vejam a definição de ConstSpec na gramática.
+2009-11-11 02:41  pbarreto/status/5615672622         @barbolo @guiraldelli Leia o resto. Interfaces em #golang implementam genericidade, não classes.
+2009-11-11 02:41  ShinNoNoir/status/5615679411       Watching the #golang tech talk. From the method slides it seems that go type decls are kinda like Haskell's newtype.
+2009-11-11 02:45  pbarreto/status/5615735977         @barbolo @guiraldelli E os "métodos"(?) em #golang não são mais que funções amarradas a registros, como em #Oberon
+2009-11-11 02:47  rcephas/status/5615765494          @pbarreto @barbolo @guiraldelli Vou dar um pitaco aqui. Na verdade #golang não tem classes mesmo, mas qualquer tipo pode conter métodos.
+2009-11-11 02:50  nielsgl/status/5615799705          Compiling Google's new Go language on my mac #golang #gonuts
+2009-11-11 02:54  m3thos/status/5615854713           #google launched new prog. language: #golang: fast, typesafe & concurrent - http://bit.ly/1IaD0e (from @bmccoelho)
+2009-11-11 02:55  pbarreto/status/5615863217         @rifiorelli @efregni @barbolo @guiraldelli @rcephas Hmmm... estou antevendo questões sobre #golang na prova final de #compiladores :D
+2009-11-11 03:01  leonboot/status/5615959139         Go. Went. Gone. #googlego #golang
+2009-11-11 03:02  rcephas/status/5615966650          @guiraldelli @pbarreto Engraçado, eu entendi  #golang mais como uma diversão mesmo, talvez por isso não tenha me decepcionado.
+2009-11-11 03:04  ShinNoNoir/status/5615998790       Hmm, I wonder how #golang would perform in the Language Shoot thread-ring benchmark. It might be a worthy contestant compared to Haskell.
+2009-11-11 03:08  vvatsa/status/5616058526           #golang iota enumerations, with implicit declarations. Thats not going to get confusing at all , but cute never the less.
+2009-11-11 03:11  alisohani/status/5616097524        #Google like other 20% projects is testing #GoLang too, community response concludes whether to put efforts in #Python or go w/ "Go"
+2009-11-11 03:19  DerFichtl/status/5616208598        RT: @kinderstampfer: Seems like like there already exists a programming language named "Go" http://is.gd/4Ss2y #google #golang #genial
+2009-11-11 03:19  ufcpp/status/5616212240            あっ、タグは #golang か。
+2009-11-11 03:20  vvatsa/status/5616228377           #golang eeek, interfaces is interesting, while I am sure it needs more study.
+2009-11-11 03:21  ufcpp/status/5616235693            switchはダメだ。switchだけはC系文化引きずるな。C#使いからの忠告。まあ、breakなくても自動breakな分マシそうだけど。 #golang
+2009-11-11 03:32  ShinNoNoir/status/5616398401       Since there is no #golang support for Windows (oh joy), I'm going to wait till I get home and install it on my Arch netbook :p
+2009-11-11 03:35  barbolo/status/5616450429          @rcephas @pbarreto @guiraldelli quem sabe não cai na prova do ano que vem? #compiladores #golang
+2009-11-11 03:44  Rayerd/status/5616574976           またまたご冗談を #d_lang ＞「もう長らくシステム言語が登場していない」（パイク氏）。 #golang
+2009-11-11 03:49  nielsgl/status/5616662800          Wonders why Go is advertised as garbage-collected but the garbage collector is not implemented yet as far as I can tell... #golang #gonuts
+2009-11-11 03:49  Rayerd/status/5616667409           GoをDに置き換えても全く違和感がないｗ #d_lang ＞Goが実用段階に入るにはまだ時間がかかりそうだが、C/C++の代替となり得るのか、さらにはC++、Java、C#、Objective-Cに並ぶCの後継言語となれるのか、注目株と言えそうだ。 #golang
+2009-11-11 03:52  ueshita/status/5616720364          コルーチンならぬゴルーチン噴いた #golang
+2009-11-11 03:59  7shi/status/5616839395             FreeBSD用でっち上げました http://pastebin.com/m2311bc16 でもruntimeで止まります。 RT @syuu1228: ぉぉ、DragonFlyすか… RT @imaik: libmach 内に os 依存 code があって #golang
+2009-11-11 04:00  henrikhodne/status/5616871854      Was the first reaction to other people seeing Go for the first time "Java?"? #golang
+2009-11-11 04:02  babydaemons/status/5616898741      さすがGJ！後で追っかける！ RT: @7shi: FreeBSD用でっち上げました http://pastebin.com/m2311bc16 でもruntimeで … RT @imaik: libmach 内に os 依存 code があって #golang
+2009-11-11 04:04  bitfield/status/5616940770         Google invented Go? Man I thought the Chinese did that about a million years ago. Still, who's up for a game? #golang
+2009-11-11 04:13  m92o/status/5617076486             httpパッケージの機能が足りないので、継承してオーバーライドしたいけど出来ないんだ。オブジェクト指向じゃないのね #golang
+2009-11-11 04:16  bjornlilja/status/5617137242       Google släpper eget programeringsspråk: http://golang.org/ http://bit.ly/3jvt5m #golang #go
+2009-11-11 04:18  tdhse/status/5617164650            Eh. Hrm. RT @bjornlilja: Google släpper eget programeringsspråk: http://golang.org/ http://bit.ly/3jvt5m #golang #go
+2009-11-11 04:19  antonioriveras/status/5617180069   Vad säger ni programmerare? RT @bjornlilja: Google släpper eget programeringsspråk: http://golang.org/ http://bit.ly/3jvt5m #golang #go
+2009-11-11 04:24  jlind/status/5617263937            RT @bjornlilja: Google släpper eget programeringsspråk: http://golang.org/ http://bit.ly/3jvt5m #golang #go
+2009-11-11 04:29  throger/status/5617333953          And the new Go Language by Google http://golang.org/ #go #golang
+2009-11-11 04:36  gabrielprat/status/5617461443      TODO: Futur, mirar-me #golang.org
+2009-11-11 04:39  rirakkumya/status/5617516326       なんだか、いろいろ痛そうな言語… マスコットキャラがやばい(´・ω・`) http://golang.org/doc/logo-153x55.png #golang
+2009-11-11 04:39  maluke_com/status/5617516341       golang doesn't have inheritance and requires use of interfaces for dynamic dispatch. I like that. #golang
+2009-11-11 04:39  plus7/status/5617516856            lib9とかあって吹いた #golang
+2009-11-11 04:46  rirakkumya/status/5617632571       これChrome OSの標準言語になったら泣くよ｡･ﾟ･(ﾉД`)  #golang
+2009-11-11 04:49  JonGretar/status/5617681524        Humm... #golang seems to have everything built in for a web framework. Including a templating language.
+2009-11-11 04:50  awhillas/status/5617699169         The #golang -uage looks nice! A lightweight C with a pinch of Python, 3 months before the 1st MVC framework I bet ;) http://bit.ly/1N2xgL#mb
+2009-11-11 05:09  Ha_Sch/status/5618066883           #golang has nice ideas, but clearly targeted for #google web apps and not general purpose #programming http://bit.ly/2w1nL6
+2009-11-11 05:17  kryozahiro/status/5618215056       googleがGoって言語を作ったらしい #golang
+2009-11-11 05:26  einsidan/status/5618406943         Watching an intro to Go at http://bit.ly/2Xo0ur #golang
+2009-11-11 05:30  rich_kilmer/status/5618484453      Effective Go: We use tabs for indentation and gofmt emits them by default. Use spaces only if you must. Really? I am a sad boy  #golang
+2009-11-11 05:31  ytnobody/status/5618490542         golangですか。システム言語ですっていってるけど、Cっぽいねなんか。http://golang.org/ #golang
+2009-11-11 05:31  10bin/status/5618498633            @hashtagsjp #golang Google発のオープンソースのプログラミング言語「Go」に関する話題。 http://golang.org/
+2009-11-11 05:33  hashtagsjp/status/5618540653       #golang を登録しました。 http://hashtagsjp.appspot.com/tag/golang
+2009-11-11 05:34  lempiji/status/5618550913          キャラクタはDの奴ほどふざけてないよな、少なくとも見た感じ生物だし #golang
+2009-11-11 05:34  lucagreco/status/5618555961        new programming language by plan9 team? interesting... I love to learn new esoteric programming languages http://bit.ly/1WvPHz #golang
+2009-11-11 05:34  nevyn/status/5618563419            Google shows off their next super-villain trick by pacifying every programmer in the world #golang #officebuzz
+2009-11-11 05:36  einsidan/status/5618599397         Oops, Google should have.... googled the name of their new programming language http://bit.ly/1Dn9hV #golang
+2009-11-11 05:38  boggle/status/5618637119           Does anyone know wether go supports tail recursion? #golang
+2009-11-11 05:38  kryozahiro/status/5618645758       C++を今風にしたような感じだけど、D言語に似てるなぁ #golang
+2009-11-11 05:41  rich_kilmer/status/5618693368      Go allows returning multiple values...yay! #golang
+2009-11-11 05:42  ytnobody/status/5618714281         ほっほお、ARMでも動きますか。#golang
+2009-11-11 05:42  10bin/status/5618727630            Googleの新しいプログラミング言語Go == Python（開発が速い） + C++（実行速度が速い） http://bit.ly/17g4y9 #golang
+2009-11-11 05:47  gerpje/status/5618816896           Tussen de werkzaamheden door wat spelen met #golang
+2009-11-11 05:50  10bin/status/5618893075            早速 Go 言語を試してみる！ - IT戦記 http://bit.ly/38zOzB #golang
+2009-11-11 05:51  10bin/status/5618895298            グーグル、オープンソースのプログラミング言語「Go」を発表:ニュースクリップ - CNET Japan http://bit.ly/1ADFyp #golang
+2009-11-11 05:51  10bin/status/5618897434            グーグル、C／C++に代わる新言語「Go」をOSSで公開 － @IT http://bit.ly/2jEHPX #golang
+2009-11-11 05:51  ytnobody/status/5618911729         手元のUbuntu8.04にいれますぞ #golang
+2009-11-11 05:51  10bin/status/5618912426            シンプルで高速、Googleの新プログラミング言語「Go」 | エンタープライズ | マイコミジャーナル http://bit.ly/4679Gr #golang
+2009-11-11 05:52  10bin/status/5618927193            Google、オープンソースのプログラミング言語「Go」リリース - ITmedia News http://bit.ly/2RJBNc #golang
+2009-11-11 05:52  10bin/status/5618935962            新プログラミング言語「Go」をCentOSにインストールしてみた « zaru blog http://bit.ly/3DfwFY  #golang
+2009-11-11 05:53  10bin/status/5618956401            GoogleがUNIX作者らが開発した新言語「Go」をオープンソースとして公開 - ニュース：ITpro http://bit.ly/IfY0A #golang
+2009-11-11 05:53  muka_/status/5618944875            すばやいですね～！ RT @10bin: 早速 Go 言語を試してみる！ - IT戦記 http://bit.ly/38zOzB #golang
+2009-11-11 05:53  10bin/status/5618945109            Google、オープンソースのプログラミング言語「Go」リリース - ITmedia エンタープライズ http://bit.ly/3fwGTx #golang
+2009-11-11 05:53  ytnobody/status/5618955821         mercurialはaptitudeで入れることに。easy_install経由だとこけちゃう。 #golang
+2009-11-11 05:53  kryozahiro/status/5618938918       一番の違いはGoroutineなのかな？あとパッと見だけどライブラリが充実してる気がする #golang
+2009-11-11 05:54  10bin/status/5618964122            グーグル、オープンソースのプログラミング言語「Go」を発表 - Editor’s FYI - ZDNet Japan http://bit.ly/46jpfb #golang
+2009-11-11 05:56  10bin/status/5619014080            なんか Go で書くのが流行ってるみたいなので - muddy brown thang http://bit.ly/2mcool #golang
+2009-11-11 05:57  rich_kilmer/status/5619038786      Do not communicate by sharing memory; instead, share memory by communicating. #golang
+2009-11-11 06:04  10bin/status/5619178373            ってことで、今日の「Go」に関する話題集。 by 開発者注目のはてなブックマーク@CodeZine http://codezine.jp/bookmark/?dt=20091111 後でまとめてみる！#golang
+2009-11-11 06:05  aiwilliams/status/5619210598       @rich_kilmer Thanks for the #golang tweets. Hope to see you continue pointing out what you like/dislike.
+2009-11-11 06:10  ytnobody/status/5619316234         レポジトリおもすぎだろ常識的に考えて #golang
+2009-11-11 06:10  rich_kilmer/status/5619321153      I wonder if Go channels on OS X use the new C blocks (grand central) stuff of snow leopard...that would be cool #golang
+2009-11-11 06:23  boggle/status/5619612216           One of the interesting parts about golang is "embedding", a type-safe and sound way of delegation. #golang
+2009-11-11 06:23  steltenpower/status/5619614475     I have loads of CSP(-tool) related ideas that might become a lot easier thanks to #golang and vice versa
+2009-11-11 06:23  boggle/status/5619618200           Still all in all i find it more lacking than inspiring #golang
+2009-11-11 06:24  jsanti/status/5619632460           var a uint64 = 1;  ...really?? ewww #golang
+2009-11-11 06:27  ytnobody/status/5619706458         ほっほう、helloworld.goがうごいた。 #golang
+2009-11-11 06:34  jsanti/status/5619859816           #golang looks like a perfect case of "Design by committee". A patchwork of cool features lacking a unifying vision.
+2009-11-11 06:39  dynobuoy/status/5619970274         Crappydy do and name the fool - Yet another programming language, this time from Gooooooogle! http://is.gd/4SAsF #golang
+2009-11-11 06:39  ytnobody/status/5619990521         http://golang.org/pkg/ ライブラリ一覧 CPANみたいになるといいのにね #golang
+2009-11-11 06:42  ytnobody/status/5620053801         http://golang.org/pkg/regexp/ むう、正規表現まわりがなんか好きじゃないなあ。。。 #golang
+2009-11-11 06:45  khurtwilliams/status/5620133985    I may get flack for saying this but ... I hate typed languages based on C/C++ but I do like garbage collection: #golang
+2009-11-11 06:59  ufcpp/status/5620455587            Go の話書いた。 http://tinyurl.com/yft5uw4 #golang
+2009-11-11 07:02  MarceloAndrade/status/5620552064   Habemus nuevo lenguaje de programación #golang http://golang.org/ from @google
+2009-11-11 07:02  dojoforum/status/5620547257        Hmm, neben einer eigenen JS-Bibliothek wie Closure nun auch noch eine eigene Programmiersprache von Google? http://golang.org/ #golang
+2009-11-11 07:05  JamieBeach/status/5620611953       Anyone working on a Windows port? #golang
+2009-11-11 07:08  Karthik_s/status/5620681698        #golang is supposed to be concise than c++ and java and easier to understand!. Is google planning to rewrite all of it's apps in #golang?
+2009-11-11 07:20  dojoforum/status/5620996870        From the Go FAQ: "There is a growing rebellion against cumbersome type systems like those of Java and C++". #golang #js #php #python #java
+2009-11-11 07:26  saintbr/status/5621149309          @vedovelli eu acho que essa #golang ainda não vai nos afetar enquanto programadores de interface, deve ser bem mais back-end, bem mais
+2009-11-11 07:45  teriiehina/status/5621622507       se demande s'il pourrait porter #jetpack sur #safari en utilisant #golang
+2009-11-11 07:46  yaotti/status/5621637039           #Golang のトップページにあるサンプルコードがfmt.Printf("Hello, 世界\n")と日本語が含まれてるのは何でだろう
+2009-11-11 07:53  jordanterrell/status/5621825021    What is your reaction to Google's Go language: http://golang.org/  #golang
+2009-11-11 07:54  jgomo3/status/5621858943           http://bit.ly/4b85A5 #GO #golang #Google
+2009-11-11 07:56  jordanterrell/status/5621906408    My first, uninformed, knee-jerk reaction to #golang is: Why???  We've got .NET and Java - what is so missing that we need yet another lang?
+2009-11-11 07:58  jordanterrell/status/5621945581    Funny - #golang goroutines.  Sounds like a play on coroutines.
+2009-11-11 08:03  acpmasquerade/status/5622087269    @bibstha switch case is mystical #golang
+2009-11-11 08:04  Joolz/status/5622103027            Finally - http://github.com/rsms/Go.tmbundle - A tmbundle for Go - my life is complete #golang
+2009-11-11 08:07  qiezi/status/5622203494            已经看到的部分，觉得比较喜欢的有：concept，类似c++0x里的（已xx）；select，我觉得挺头疼的多channel接收问题，它解决得很好。 #golang
+2009-11-11 08:07  isaacccase/status/5622196594       full google tech talk on the go programming language: http://bit.ly/2Xo0ur #golang
+2009-11-11 08:07  jlouis666/status/5622194325        The language Go http://golang.org looks very well thought out. It will be interesting to follow its path into the future #golang
+2009-11-11 08:08  rich_kilmer/status/5622211270      FYI: Go is NOTHING like Python.  The quote is: it gives you the development speed of working in a dynamic language like Python #golang
+2009-11-11 08:15  acpmasquerade/status/5622400000    @acpmasquerade i am skipping the Go Memory Model eventhough i understand that this was the first which I had to go through #golang
+2009-11-11 08:19  ufcpp/status/5622516208            Go、(a, b).Method(arg) みたいな書き方（で多重ディスパッチ）はできるのかなぁ。仕組み上はできてもおかしくないんだけど。#golang
+2009-11-11 08:23  leuriel/status/5622608558          From #cat-v in irc about a new #golang project: <shardz> I'm starting a project called 'go-d'. It's going to be vapourware, though.
+2009-11-11 08:26  jtraub/status/5622677152           Только мне одному не понятно место #golang среди других ЯП? Честно говоря программы выглядят не особо красиво и выразительно.
+2009-11-11 08:30  jntrnr/status/5622777298           Posted about my first experiences with #golang, Google's Go programming language: http://bit.ly/2jikPo
+2009-11-11 08:34  angry_web/status/5622881167        сегодня ведь не первое апреля? и даже не #пятница? #GoLang от #google http://is.gd/4SFcZ комментарий показателен
+2009-11-11 08:38  pavolrusnak/status/5622983274      Hm, will #Google rename its #Go language? http://bit.ly/1Dn9hV // #Golang seems fine to me
+2009-11-11 08:38  acpmasquerade/status/5622990558    @bibstha This is the first time Google didnt make its product's first release for Windows #golang
+2009-11-11 08:45  akuhn/status/5623169458            "There is a growing rebellion against cumbersome type systems like Java and C++, pushing ppl towards dynamically typed langs" — #golang FAQ
+2009-11-11 08:51  MarkusQ/status/5623317759          ~@psnively Good point about BitC. I'll give #golang another look later to try to spot the Ah! That's Why!, but so far, I'm underwhelmed.
+2009-11-11 08:54  olekvi/status/5623402178           http://bit.ly/2Xo0ur (http://golang.org/ #golang) - Google leverer mye om dagen, spennende å følge med på.
+2009-11-11 08:54  jnwhiteh/status/5623407974         Has too much email due to joining the #golang mailing list, but at least some of the discussions are interesting and relevant =)
+2009-11-11 08:57  MarkusQ/status/5623482491          @psnively So maybe I'm an outlier (or insufficiently "agile"), but compile/link times aren't high on my list of must-haves. #golang
+2009-11-11 08:58  napsy/status/5623489444            A concurrent, garbage-collected, low-level programming language from Google - "go" http://bit.ly/43sXFa #golang
+2009-11-11 09:00  Cbab_/status/5623550143            w00t!   Google Golang released.    I might just have to pick this up.  http://golang.org/  #google #golang #awesomesauce #midgets
+2009-11-11 09:02  marcocamejo/status/5623611939      Alguien ha programado ya en Go? #golang
+2009-11-11 09:04  DeadPx/status/5623663502           Go, un nouveau langage de programmation open source par… Google ! http://golang.org #golang
+2009-11-11 09:33  mmayo/status/5624357320            Issue 9. Love it! http://bit.ly/1Dn9hV #golang #i9
+2009-11-11 09:35  flowolf/status/5624402623          #go seems absolutely brilliant! parallelize calculations is painless. can't wait to try it out. #golang http://qr.cx/3Hg (1h video)
+2009-11-11 09:40  barbolo/status/5624531875          @Roberto_Barros Sim! Os paradigmas de hoje são diferentes de tempos atrás. Precisamos de linguagens mais ágeis e que performam. #golang
+2009-11-11 09:42  chanezon/status/5624571044         RT @naokirodion: @chanezon Japanese developers plan to have a meet up for learning go lang. http://atnd.org/events/2115 #golang great!
+2009-11-11 09:45  repeatedly/status/5624656528       Go TLを見直してみたけど，結局何も新しい情報なかったお．やっぱりまだ嬉しさも面白みもないよなぁ． #golang
+2009-11-11 09:46  hpauer_tw/status/5624664517        RT: @flowolf: new programming language from #google: #go. first impression is nice. #golang #dev http://golang.org
+2009-11-11 09:47  DallasPool/status/5624692057       #golang ... I'm not impressed... I'll come back in a few months and see how you mature.
+2009-11-11 09:47  repeatedly/status/5624698733       やっぱり「go文使えば楽！」くらいか． #golang
+2009-11-11 09:48  ir5/status/5624732737              #golang とは何なのだろう
+2009-11-11 09:49  shikhrr/status/5624739108          #golang is ugly for a new language (for all its pretenses)
+2009-11-11 09:57  repeatedly/status/5624933825       GoのライブラリはToDoが多いイメージ #golang
+2009-11-11 10:06  repeatedly/status/5625168948       起きて思ったけど，GoのスタックにそもそもポインタしたかないならPrecise GCになるな．つまり，処理系がルートを提供している． #golang
+2009-11-11 10:09  Roberto_Barros/status/5625232686   r @barbolo O #golang só vai ser bom se conseguir acabar com as aplicações em C e C++. Aí estaríamos em um mundo melhor ;-)
+2009-11-11 10:10  repeatedly/status/5625260216       後俺が待ってるのが，goによる並列処理がどこまでパフォーマンスがあるのか，という所．誰か調べてくれるだろう．それによってはD言語と併用してもいい． #golang
+2009-11-11 10:11  repeatedly/status/5625280436       ただあれだけ凄いメンバがいるわけで，少し肩透かし感は否めない． #golang
+2009-11-11 10:24  Ixtapa/status/5625585588           Have a look at the new google programming language: "issue 9" or "i9" http://is.gd/4SJvP #i9 #golang
+2009-11-11 10:26  repeatedly/status/5625642659       GoとD言語の簡単な比較 http://bit.ly/44C7dd #d_lang #golang
+2009-11-11 10:27  femm/status/5625663101             RT @repeatedly: GoとD言語の簡単な比較 http://bit.ly/44C7dd #d_lang #golang
+2009-11-11 10:28  83TB/status/5625675943             going through #golang docs,completely astonished,wonderin if interpreted languages just lost their sense,120klines of code compile in 10sec?
+2009-11-11 10:31  dwlz/status/5625761866             #golang doesn't really solve any problems for me, moving on. Now learning Google Visualization APIs. Yessssss
+2009-11-11 10:33  repeatedly/status/5625818422       Goでのgoに関して． http://bit.ly/4gK08T #golang
+2009-11-11 10:34  Ixtapa/status/5625821976           Google, doesn't do evil -> will have to change the name of the go programming language ! Bye, bye Go, hello Issue 9 ! #golang #i9
+2009-11-11 10:36  yanbe/status/5625881672            #golang を使って何が出来るの？何が嬉しいの？という疑問を解決したい人はTechTalkのスライドを眺めると手っ取り早い http://bit.ly/2w3MB7 (PDF)
+2009-11-11 10:38  Seasons/status/5625915111          なるほどー。RT @yanbe: #golang を使って何が出来るの？何が嬉しいの？という疑問を解決したい人はTechTalkのスライドを眺めると手っ取り早い http://bit.ly/2w3MB7 (PDF)
+2009-11-11 10:38  aaront/status/5625933592           Wrote my first program in Go: An implementation of Euler's totient function: http://bit.ly/14sn9q #golang #go #google
+2009-11-11 10:52  Ixtapa/status/5626259496           RT @aoldoni @galvez @acangiano @RyanMcE Exited about Google's new programming language, "Issue 9": http://bit.ly/1Dn9hV #golang #i9 #issue9
+2009-11-11 10:56  ClintCombs/status/5626343769       Can we expect a Google Go port to Windows? #golang
+2009-11-11 10:57  Ixtapa/status/5626378590           RT @gldnspud By "Go" do you mean the new language called "Issue 9"? :) http://bit.ly/1Dn9hV #golang #issue9 #i9
+2009-11-11 11:02  arthurfurlan/status/5626493926     "Go compilers support two operating systems (Linux, Mac OS X)" - http://bit.ly/2I1xIg #golang #go
+2009-11-11 11:05  ncoronges/status/5626554666        When can we expect #golang #eclipse plugins ?
+2009-11-11 11:07  cargowire/status/5626603549        I suspect being a fly on the wall at google is like this: "I'm not sure I like this"... "Ok lets just build our own" #golang #chrome
+2009-11-11 11:08  robbiexor/status/5626623891        Google employees don't know how to use Google http://tinyurl.com/yg5femb #google #golang
+2009-11-11 11:18  Ixtapa/status/5626828970           PETITION -> Google should rename "Go" in "Issue 9" http://bit.ly/1xaIkN #golang #issue9 #i9 #go
+2009-11-11 11:29  woakin/status/5627050941           para todos los geeks, el futuro de la programación http://golang.org/ #golang
+2009-11-11 11:42  jlbelmonte/status/5627344360       ya han creado un grupo de #golang en @debugmodeon http://es.debugmodeon.com/grupo/go
+2009-11-11 11:45  Miripi/status/5627407010           RT @jlbelmonte: ya han creado un grupo de #golang en @debugmodeon http://es.debugmodeon.com/g...
+2009-11-11 11:51  JamieBeach/status/5627528357       Just reading up a tiny bit more about #golang - like the simple thread handling (Goroutines) . http://is.gd/4SNf4
+2009-11-11 11:54  desireco/status/5627608474         @byennen I checked out #GoLang and... it is not python-ish enough to be exciting. Maybe Google does something to make it more interesting.
+2009-11-11 11:57  ShinNoNoir/status/5627671201       So yeah, Google's go versus McCabe's Go!... Will this end in a lawsuit? :p http://bit.ly/2xsbs8 #golang
+2009-11-11 12:06  JimRoepcke/status/5627875279       Google should quickly, officially rename #Go to #Golang - looks like Erlang, and both focus on safe concurrency.
+2009-11-11 12:09  catearcher/status/5627957666       Da glaubst du, Google hat jetzt echt alles gemacht, und dann: BOOM! Neue Programmiersprache, bitches! #go #golang #google
+2009-11-11 12:19  ivmos/status/5628212875            #golang sólo tiene interfaces, ¿composición o nada siempre es mejor que heredar implementaciones?
+2009-11-11 12:31  brentrowland/status/5628495257     #golang looks interesting for a systems language. Hey Google, how about letting us program the Android using Go instead of Java?
+2009-11-11 12:53  dqo/status/5628950212              var s string = "" >> Ok, are we back to the 90's? #golang
+2009-11-11 13:01  mahrteen/status/5629156038         Vi la charla y estuve leyendo un poco sobre #golang (golang.org). Cómo hago para comprar acciones de #google?
+2009-11-11 13:04  puredanger/status/5629234088       like.  RT @JimRoepcke: Google should quickly, officially rename #Go to #Golang - looks like Erlang, and both focus on safe concurrency.
+2009-11-11 13:30  philoupedia/status/5629882211      @Dwarth Be at the lookout for any To command, it's only a GoTo in disguise #golang
+2009-11-11 13:31  ktorn/status/5629921207            Google Go? What took them so long? #golang
+2009-11-11 13:33  argv0/status/5629973230            also, re: #golang aesthetics, the .PublicName vs. .privateName convention rubs me the wrong way.
+2009-11-11 13:37  argv0/status/5630073463            on the positive side, multiple and named return values FTW #golang
+2009-11-11 13:43  repeatedly/status/5630217978       これ代入できるのはいいとして，どうせ他の関数呼べないのだから制約から言うとあまり差がないような？ http://bit.ly/1aVEgz #golang
+2009-11-11 13:44  argv0/status/5630258947            hopefully C/C++ interop is a priority for #golang  - the added safety and CSP features make it potentially interesting for #erlang drivers.
+2009-11-11 13:50  argv0/status/5630411031            done babbling about #golang for now.  sorry.
+2009-11-11 13:50  argv0/status/5630406007            i hope #golang gets c++-style templates (/me ducks).  contrary to http://bit.ly/1wN8Fq, i don't see how they'd complicate the runtime at all
+2009-11-11 13:52  argv0/status/5630465030            I lied:  choice quote from the #golang FAQ:  "Do not communicate by sharing memory. Instead, share memory by communicating."
+2009-11-11 14:03  hisatake/status/5630748170         それにしても #golang はwinに対応してないし、Chrome Frame作ったし最近のgoogleのやってる事はすごい。
+2009-11-11 14:06  bcharder/status/5630803114         Lots of positive comments from interesting people regarding #go #golang #google #programming http://golang.org
+2009-11-11 14:49  heggak/status/5631927418           ser Google's timelange video om det nye programmeringsspråket deres #golang
+2009-11-11 14:54  juixe/status/5632072352            Google Go: My Take on Issue 9: http://tinyurl.com/ybel3x2 #golang #google #programming #language #trademark
+2009-11-11 14:57  nuttycom/status/5632138329         "A method is just a function which has a parameter preceeding the function name." http://bit.ly/3lk2Wj <- #golang nails it
+2009-11-11 15:00  georgeyk0/status/5632241011        depois de ler sobre #golang, não consigo parar de pensar que eu deveria aprender erlang... (talvez caml tb ^^)
+2009-11-11 15:01  nuttycom/status/5632254468         "An interface is a specification of what methods a type must provide to be used in some context." http://bit.ly/3lk2Wj <- #golang nails it
+2009-11-11 15:05  joeld42/status/5632357780          Very excited about new programming language, #golang http://golang.org/
