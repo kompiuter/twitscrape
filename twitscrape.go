@@ -17,19 +17,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-
-/*
-Package twitscrape is a library for scraping tweets from the twitter archive.
-The archive is pubicly available and can be searched through at:
-https://twitter.com/search-advanced?lang=en
-
-No authentication is required and the package can be run without any
-prior configurations.
-
-Query operators may be used on the search term using the standard query
-operators as defined by Twitter:
-https://dev.twitter.com/rest/public/search#query-operators
-*/
 package twitscrape
 
 import (
